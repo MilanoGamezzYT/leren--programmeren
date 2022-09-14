@@ -29,3 +29,9 @@ input
 #print('Enter your name:')
 # x = input()
 #print('Hello, ' + x)
+###################################################################
+# How to use git
+# 1st do git add .
+# 2nd do git commit -a -m "test"
+# 3rd do git push and done!
+##################################################################
