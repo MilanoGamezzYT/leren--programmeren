@@ -3,9 +3,6 @@
 Small = 10
 Medium = 12
 Large = 15
-afmeting_small = 25
-afmeting_medium = 29
-afmeting_large = 35
 
 
 s = int(input('Hoeveel Small pizzas (25cm) (€10) wilt u hebben? '))
