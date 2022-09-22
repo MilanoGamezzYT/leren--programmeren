@@ -22,7 +22,8 @@ print(f'De {x} is nog steeds het duurst, de telefoon kost €{prijs_iphone} ')
 print(f'De {y} is nog steeds het goedkoopst, de telefoon kost €{prijs_samsung} ')
 print("Het advies is dus om geen telefoon te kopen want ze zijn te duur")
 
-# Uitbereiding 2
+# Uitbereiding 2    
+
 
 
 
