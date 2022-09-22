@@ -1,4 +1,4 @@
-Verschil = 40
+
 
 prijs_iphone = int(input('Hoe duur is de iphone 13? '))
 print(f'De Iphone kost €{prijs_iphone}')
@@ -8,7 +8,12 @@ print("")
 print(f'De Iphone is het duurst, de telefoon kost: €{prijs_iphone}')
 print(f'De samsung is het goedkoopst, de telefoon kost: €{prijs_samsung} ')
 print("")
-print(f'Het advies is dus om de Iphone te kopen. Deze is namelijk {Verschil} euro duurder dan de Samsung')
+print(f'Het advies is dus om de Iphone te kopen. Deze is namelijk {prijs_iphone - prijs_samsung} euro duurder dan de Samsung')
+
+
+
+
+
 
 
 
