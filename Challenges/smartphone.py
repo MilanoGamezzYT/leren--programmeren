@@ -14,8 +14,15 @@ print(f'De {x} is het duurst, de telefoon kost: €{prijs_iphone}')
 print(f'De {y} is het goedkoopst, de telefoon kost: €{prijs_samsung} ')
 print("")
 print(f'Het advies is dus om de {x} te kopen. Deze is namelijk {prijs_iphone - prijs_samsung} euro duurder dan de {y}')
+print("")
 
 # Uitbereiding 1
+
+print(f'De {x} is nog steeds het duurst, de telefoon kost €{prijs_iphone} ')
+print(f'De {y} is nog steeds het goedkoopst, de telefoon kost €{prijs_samsung} ')
+print("Het advies is dus om geen telefoon te kopen want ze zijn te duur")
+
+# Uitbereiding 2
 
 
 
