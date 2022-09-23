@@ -5,7 +5,9 @@ if b > a:
     print('a is het kleinste getal')
 elif a > b:
     print('a is het grootste getal')
-    
+else:
+    print('a en b zijn gelijk')
+
     a = min
     b = max
 
