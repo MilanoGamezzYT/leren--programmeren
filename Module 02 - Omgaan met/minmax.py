@@ -10,6 +10,6 @@ else:
 
     a = min
     b = max
-
-
-
+if a < b:
+    print(f'De minimum is {a}')  
+    print(f'De maximum is {b}')
