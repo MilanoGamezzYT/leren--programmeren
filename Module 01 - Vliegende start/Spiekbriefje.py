@@ -20,7 +20,7 @@ print("Hallo ik ben Milan")
 
 
 ###################################################################
-BIF = BuiltInFuncties  # print() of string
+#BIF = BuiltInFuncties  # print() of string
 
 ###################################################################
 # multiline_string = ''' 
