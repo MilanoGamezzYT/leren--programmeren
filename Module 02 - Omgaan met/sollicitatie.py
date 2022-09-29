@@ -1,4 +1,4 @@
-naam = input('Wat is uw naam?' )
+naam = input('Wat is uw naam? ')
 geslacht = input('Wat is uw geslacht? ')
 if geslacht ==  ('man'): 
     snor_vraag = input('Heeft u een snor? ')
