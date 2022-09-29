@@ -16,7 +16,7 @@ certificaat = input('Heeft u een Certificaat “Overleven met gevaarlijk persone
 dieren_dressuur = int(input('Hoeveel jaar praktijkervaring heeft u met dieren-dressuur? ' ))
 jongleren = int(input('Hoeveel jaar ervaring heeft u met jongleren? ' ))
 acrobatiek = int(input('Hoeveel jaar praktijkervaring heeft u met acrobatiek? ' ))
-
+print("")
 
 if (geslacht == 'man' and snor_vraag == 'ja' and snor_breedte >= 10) or (geslacht == 'vrouw' and haar_kleur == 'rood' and haar_lengte >= 20) and hoge_hoed == 'ja' and rijbewijs == 'ja' and lengte >= 150 and gewicht >= 90 and diploma == 'ja' and certificaat == 'ja' and (dieren_dressuur >= 4 or jongleren >= 5 or acrobatiek >= 3):
     print('Gefeliciteerd, u bent aangenomen! ')
