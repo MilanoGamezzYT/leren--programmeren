@@ -21,5 +21,4 @@ acrobatiek = int(input('Hoeveel jaar praktijkervaring heeft u met acrobatiek?' )
 if (geslacht == 'man' and snor_vraag == 'ja' and snor_breedte >= 10) or (geslacht == 'vrouw' and haar_kleur == 'rood' and haar_lengte >= 20) and hoge_hoed == 'ja' and rijbewijs == 'ja' and lengte >= 150 and gewicht >= 90 and diploma == 'ja' and certificaat == 'ja' and (dieren_dressuur >= 4 or jongleren >= 5 or acrobatiek >= 3):
     print('Gefeliciteerd, u bent aangenomen! ')
 else:
-    print('U bent niet aangenomen ')
-
+    print('U bent niet aangenomen omdat u niet aan de eisen voldoet. ')
