@@ -1,19 +1,19 @@
-naam = input('Wat is uw naam? ').lower
-geslacht = input('Wat is uw geslacht? ').lower
+naam = input('Wat is uw naam? ').lower()
+geslacht = input('Wat is uw geslacht? ').lower()
 if geslacht ==  ('man'): 
-    snor_vraag = input('Heeft u een snor? ').lower
+    snor_vraag = input('Heeft u een snor? ').lower()
     if snor_vraag == 'ja':
         snor_breedte = int(input('Hoe breed is uw snor in cm?  '))
 if geslacht == ('vrouw'):
-    haar_kleur = input('Wat voor kleur haar heeft u?  ').lower
+    haar_kleur = input('Wat voor kleur haar heeft u?  ').lower()
     if haar_kleur == 'rood':
         haar_lengte = int(input('Hoelang is uw haar in cm?  '))
-hoge_hoed = input('Heeft u een hoge hoed? ').lower
-rijbewijs = input('heeft u een geldig vrachtwagenbewijs? ').lower
+hoge_hoed = input('Heeft u een hoge hoed? ').lower()
+rijbewijs = input('heeft u een geldig vrachtwagenbewijs? ').lower()
 lengte = int(input('Hoelang bent u in cm?' ))
 gewicht = int(input('Hoeveel weegt u in kg? '))
-diploma = input('Heeft u een Diploma MBO-4 ondernemen? ').lower
-certificaat = input('Heeft u een certificaat genaamd Overleven met gevaarlijk personeel? ' ).lower
+diploma = input('Heeft u een Diploma MBO-4 ondernemen? ').lower()
+certificaat = input('Heeft u een certificaat genaamd Overleven met gevaarlijk personeel? ' ).lower()
 dieren_dressuur = int(input('Hoeveel jaar praktijkervaring heeft u met dieren-dressuur? ' ))
 jongleren = int(input('Hoeveel jaar ervaring heeft u met jongleren? ' ))
 acrobatiek = int(input('Hoeveel jaar praktijkervaring heeft u met acrobatiek? ' ))
