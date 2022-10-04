@@ -1,14 +1,13 @@
 a = int(input('Voer een getal in '))
 b = int(input('Voer nog een getal in '))
-
-if a > b: 
-    print(f'a is het grootste getal: {a}')
-    a = max
-elif b > a:
-    print(f'a is het kleinste getal: {a}')
-    a = min
+if a > b :
+    max  = a
+    min = b
+    print(f'a is het grootste getal {max}') 
+elif a < b:
+    min = a
+    max = b
+    print(f'a is het kleinste getal {min}')
 else:
-    print('a en b zijn gelijk')
+    print(f'a is gelijk aan b')
 
-print(f'De minimum is {a}')
-print(f'De maximum is {b}')
