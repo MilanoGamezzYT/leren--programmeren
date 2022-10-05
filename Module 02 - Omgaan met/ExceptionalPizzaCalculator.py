@@ -31,5 +31,3 @@ print(" ")
 print(f'€{totaal_small + totaal_medium + totaal_large} totaal voor alle pizzas |')
 print("Eetsmakelijk en Tot ziens!  | ")
 print("--------------------------- |")
-
-

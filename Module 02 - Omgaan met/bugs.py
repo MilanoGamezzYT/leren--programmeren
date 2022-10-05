@@ -1,10 +1,9 @@
-from random import random
+import random
 
+naam = input("Wat is je naam? ")
+print('Hallo', naam)
 
-name = print('Wat is jouw naam? ')
-print('Hallo', name)
-
-favoriteSeason = input(f'Wat is jouw favorite seizoen {name}? A) Lente, B) Zomer, C) Herfst of D) Winter ')
+favoriteSeason = input(f'Wat is jouw favorite seizoen {naam}? A) Lente, B) Zomer, C) Herfst of D) Winter ')
 answer = favoriteSeason.lower()
 
 if answer == 'a':
@@ -20,20 +19,20 @@ else:
 
 favoriteColor = input('En wat is je favoriete kleur? ') 
 trueOrFalse = int(random.randint(0,1))
-if True:
+if trueOrFalse == 0:
     print('Ik vind dat ook een mooie kleur!')
-elif not False:
-    print('TBH, ik hou niet zo van {}...'.format(favoritecolor))
+elif trueOrFalse == 1:
+    print('TBH, ik hou niet zo van {}...'.format(favoriteColor))
 
 num1 = random.randint(1,10)
 num2 = random.randint(5,15)
 
 try:
-    number = input(f'En weet jij wat {num1} + {num2} is? ') 
-    if int(number == num1 - num2):
+    number = int(input(f'En weet jij wat {num1} + {num2} is? ') )
+    if int(number == num1 + num2):
         print('Dat is goed!')
     else:
-        print('Nee dat klopt niet {}'.format(name))
+        print('Nee dat klopt niet {}'.format(naam))
 
 except:
     print('Dat is geen nummer!')
