@@ -10,7 +10,7 @@ if start_game == 'yes':
     print('You go to the children')
     print('You ask them what they are doing')
     print('They say they are playing')
-    slingshot = str(print('They ask you if you can find the slingshot'))
+    slingshot = input('They ask you if you can find the slingshot')
     if slingshot == 'yes':
         print('You are walking to the main village')
         print('You see a shop')
@@ -19,7 +19,9 @@ if start_game == 'yes':
         print('He says yes but you need to do some quests')
         print('You say ok')
         print('The first quest is to catch a fish for the cat')
-        print('Then an man asks if you can help him')   
-        print('You say yes') 
+        help1 = input('Then an man asks if you can help him')   
+        if help1 == 'yes':
+        
 
 
+printdelay = 60
