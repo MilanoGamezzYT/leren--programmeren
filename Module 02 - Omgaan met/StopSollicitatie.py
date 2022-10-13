@@ -1,6 +1,7 @@
 naam = input('Wat is uw naam? ').lower()
 if naam == 'lars':
     raise NameError('Lars mag niet solliciteren')
+    exit()
 geslacht = input('Wat is uw geslacht? ').lower()
 if geslacht ==  ('man'): 
     snor_vraag = input('Heeft u een snor? ').lower()
@@ -15,9 +16,11 @@ rijbewijs = input('heeft u een geldig vrachtwagenbewijs? ').lower()
 lengte = int(input('Hoelang bent u in cm?' ))
 if lengte < 150:
     raise NameError('U bent te klein voor deze baan')
+    exit()
 gewicht = int(input('Hoeveel weegt u in kg? '))
 if gewicht > 120:
     raise NameError('U bent te zwaar voor deze baan')
+    exit()
 diploma = input('Heeft u een Diploma MBO-4 ondernemen? ').lower()
 certificaat = input('Heeft u een certificaat genaamd Overleven met gevaarlijk personeel? ' ).lower()
 dieren_dressuur = int(input('Hoeveel jaar praktijkervaring heeft u met dieren-dressuur? ' ))

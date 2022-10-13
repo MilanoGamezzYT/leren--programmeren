@@ -1,4 +1,4 @@
-# Milan Sebes Pizza Calculator
+# Milan Pizza Calculator
 
 Small = 10
 Medium = 12
@@ -7,7 +7,7 @@ Large = 15
 try:
     aantal_small = int(input('Hoeveel Small pizzas wilt u hebben? '))
 except:
-    print('dat is geen getal')
+    print('Dat is geen getal')
     exit()
 totaal_small = aantal_small * Small
 try:
