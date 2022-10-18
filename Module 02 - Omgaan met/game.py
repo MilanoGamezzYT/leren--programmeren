@@ -27,7 +27,7 @@ if start_game == 'yes':
         if man == 'yes':
             printDelay('You say yes')
             printDelay('The first quest is to catch a fish for the cat')
-            help1 = input('Then an man asks if you can help him ')   
+            help1 = input('Then a man asks if you can help him ')   
             if help1 == 'yes':
                 printDelay('You go to the man')
                 printDelay('You ask him what he needs help with')
@@ -83,7 +83,7 @@ if start_game == 'yes':
                         printDelay('You chose jump again and you completed the first puzzle')
                         printDelay('Link, the second puzzle is a battle against some goblins. Good luck!')
                         printDelay('You walk to the goblins and they are angry')
-                        attack = input('Which attack do you want to do? You can choose between Charge Attack, Fatal Blow or a Spin Attack  ').lower()
+                        attack = input('Which attack do you want to do? You can choose between Charge Attack or a Spin Attack  ').lower()
                         if attack == 'Charge attack' or 'fatal blow' or 'spin attack':
                             printDelay('You chose an attack and it was very effective')
                             printDelay('Good job Link, the final puzzle is to find the Boss Key')
