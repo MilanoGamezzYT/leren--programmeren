@@ -148,9 +148,6 @@ if start_game == 'yes':
                                                             printDelay('You saved Hyrule!')
                                                             printDelay('You are the Hero of Time!')
                                                             printDelay('The End')
-                                                        
-
-
                                 elif chestkey == 'no':
                                     printDelay('you need to open the chest to end this dungeon')
                                     exit()
