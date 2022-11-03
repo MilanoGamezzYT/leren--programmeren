@@ -105,8 +105,8 @@ if start_game == 'yes':
                                     printDelay('You chose jump again and you completed the first puzzle')
                                     printDelay('Link, the second puzzle is a battle against some goblins. Good luck!')
                                     printDelay('You walk to the goblins and they are angry')
-                                    attack = input('Which attack do you want to do? You can choose between Charge Attack or a Spin Attack  ').lower()
-                                    if attack == 'Charge attack' or attack == 'spin attack':
+                                    attack = input('Which attack do you want to do? You can choose between Charge Attack,Spin Attack or Fatal Blow ').lower()
+                                    if attack == 'Charge attack' or attack == 'spin attack' or attack == 'fatal blow':
                                         printDelay('You chose an attack and it was very effective')
                                         printDelay('Good job Link, the final puzzle is to find the Boss Key')
                                         bosskey = input('Do you want to go left or right?  ')
@@ -144,8 +144,8 @@ if start_game == 'yes':
                                                     printDelay('You walk to Ganon')
                                                     printDelay('You start the battle')
                                                     printDelay('Ganon is very strong')
-                                                    attack3 = input('Which attack do you want to use? You can choose between Bite Attack or a Spin Attack  ').lower()
-                                                    if attack3 == 'bite attack' or attack3 == 'spin attack':
+                                                    attack3 = input('Which attack do you want to use? You can choose between charge Attack or a Spin Attack  ').lower()
+                                                    if attack3 == 'charge attack' or attack3 == 'spin attack':
                                                         printDelay('You chose an attack and it was very effective')
                                                         printDelay('You killed Ganon and you completed the game!')
                                                         printDelay('You saved Hyrule!')
@@ -160,12 +160,12 @@ if start_game == 'yes':
                                                     printDelay('You walk to Ganon')
                                                     printDelay('You start the battle')
                                                     printDelay('Ganon is very strong')
-                                                    attack3 = input('Which attack do you want to use? You can choose between Bite Attack or a Spin Attack  ').lower()
-                                                    if attack3 == 'bite attack' or attack3 == 'spin attack':
+                                                    attack3 = input('Which attack do you want to use? You can choose between Charge Attack, Spin Attack or a Skyward strike ').lower()
+                                                    if attack3 == 'charge attack' or attack3 == 'spin attack' or attack3 == 'skyward strike':
                                                         printDelay('You chose an attack and it was very effective')
                                                         printDelay('You almost killed Ganon!')
-                                                        attack4 = input('Which attack do you want to use? You can choose between Charge Attack, Fatal Blow or a Spin Attack  ').lower()
-                                                        if attack4 == 'Charge attack' or attack4 == 'spin attack':
+                                                        attack4 = input('Which attack do you want to use? You can choose between Jump Attack, Fatal Blow or a Skyward Strike  ').lower()
+                                                        if attack4 == 'jump attack' or attack4 == 'fatal Blow' or attack4 == 'skyward Strike':
                                                             printDelay('You chose an attack and it was very effective')
                                                             printDelay('You killed Ganon and you completed the game!')
                                                             printDelay('You saved Hyrule!')
