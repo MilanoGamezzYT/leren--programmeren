@@ -2,7 +2,8 @@ import time
 def printDelay(t: str, d=0.5):
     time.sleep(d)
     print(t)
-
+#t = parameter
+#d is defaultvalue (komt door =)
 
 game_name = "Twilight Princess 2"
 
