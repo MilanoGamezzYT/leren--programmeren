@@ -17,7 +17,7 @@ if start_game == 'yes':
     printDelay('You go to the children')
     printDelay('You ask them what they are doing')
     printDelay('They say they are playing')
-    slingshot = input('They ask you if you can find the slingshot so you say?  ')
+    slingshot = str(input('They ask you if you can find the slingshot so you say?  '))
     if slingshot == 'yes':
         printDelay('You said yes  ')
         printDelay('You are walking to the main village')
@@ -120,7 +120,7 @@ if start_game == 'yes':
                                             if chestkey == 'yes':
                                                 printDelay('You opened the chest and got the boss key!')
                                                 printDelay('you walk to the big door and opened it with the key')
-                                    fight = input('Are you sure you want to start this battle? if not, it ends here  ')
+                                    fight = int(input('Are you sure you want to start this battle? if not, it ends here  '))
                                     if fight == 'yes':
                                         printDelay('You walk to the boss and start the battle')
                                         printDelay('The boss is a big monkey')
