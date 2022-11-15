@@ -1,7 +1,7 @@
 from RobotArm import RobotArm
 
 robotArm = RobotArm('exercise 4')
-robotArm.speed = 2
+robotArm.speed = 1
 for x in range(5):
     robotArm.grab()
     robotArm.moveRight()
