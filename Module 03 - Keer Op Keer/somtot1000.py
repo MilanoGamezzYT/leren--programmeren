@@ -6,4 +6,4 @@ while som < 1000:
     nummer += 1
     som += nummer
     letter += f' + {nummer}'
-    print(f'{letter} = {som}')
+    print(f'{letter} = {som}')  

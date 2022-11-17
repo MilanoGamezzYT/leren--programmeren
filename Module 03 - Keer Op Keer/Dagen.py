@@ -1,5 +1,6 @@
-vraag = input('Welke dag is het vandaag?')
-dagen = ["maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag","zondag"]
-while vraag != dagen[0]:
-    print(dagen[0])
-    dagen.pop(0)
+dagen_stoppen = input("Voer een dag in: ")
+
+for dag in ("maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"):
+    print(dag)
+    if dag == dagen_stoppen:
+        break
