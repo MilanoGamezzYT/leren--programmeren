@@ -7,6 +7,7 @@ stop = False
 while game != MAX_GAMES and stop == False:
     game += 1
     computer_getal = random.randint(1,1000)
+    print(computer_getal)
     rondes = 0  
     while rondes < MAX_RONDES:
         rondes += 1
@@ -15,20 +16,21 @@ while game != MAX_GAMES and stop == False:
             print('correct +1 punt')
             punt += 1
             break
-        elif speler_getal > computer_getal:
-            print('Lager')
         else:
-            speler_getal < computer_getal
-            print('hoger')
-        if rondes == MAX_RONDES:
-            print('je hebt 10 rondes gespeeld')
-        verschil = computer_getal - speler_getal
-        if verschil < 0 :
-            verschil *= -1
-        if verschil <= 20:
-            print('je bent erg warm')
-        elif verschil <= 50:
-            print('je bent warm')
+            if rondes < MAX_RONDES:
+                if speler_getal > computer_getal:
+                    print('Lager')
+                else:
+                    print('hoger')
+                verschil = computer_getal - speler_getal
+                if verschil < 0 :
+                    verschil *= -1
+                if verschil <= 20:
+                    print('je bent erg warm')
+                elif verschil <= 50:
+                    print('je bent warm')
+            else:
+                print(f'je hebt {MAX_RONDES} rondes gespeeld')
     if game < MAX_GAMES:
         nog_een_keer = input('wil je nog een keer?  ').lower()
         if nog_een_keer == 'nee':
