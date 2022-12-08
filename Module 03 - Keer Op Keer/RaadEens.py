@@ -38,4 +38,4 @@ while game != MAX_GAMES and stop == False:
             print(f'{punt} aantal punten')
             print('volgende ronde')    
     else:
-        print('bedankt voor het spelen!')  
+        print('bedankt voor het spelen!') 
