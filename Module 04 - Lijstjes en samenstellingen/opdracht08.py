@@ -1,6 +1,9 @@
 from fruitmand import fruitmand
 
-fruitmand.append({'name': 'watermelon', 'weight': 0, 'round': True})
-print(sum(x['weight'] for x in fruitmand))
+a = 0
+fruitmand.append({'name': 'watermeloen', 'weight': 2000, 'color': 'green', 'round': True})
 
-
+for i in fruitmand:
+    b = i['weight']
+    a += b
+print(a)
