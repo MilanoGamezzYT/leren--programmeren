@@ -6,12 +6,12 @@ Deck = ["joker", "joker"]
 
 for x in (KaartTypes):
     for y in (Nummers):
-        BijElkaar = x + y 
-        Deck.append(BijElkaar)
+        optellen = x + y 
+        Deck.append(optellen)
 
 random.shuffle(Deck)
 for z in range(1,8):
     print(f'Kaart {z}: {Deck[z]}')
     Deck.pop(z)
 
-print(f"deck ({len(Deck)} kaarten): {Deck}")
+print(f"deck {len(Deck)} kaarten: {Deck}")
