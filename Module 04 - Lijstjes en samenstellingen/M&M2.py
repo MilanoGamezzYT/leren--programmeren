@@ -10,6 +10,6 @@ for x in range(hoeveelheid):
     if kleuren[KleurVerschil] not in lijst:
         lijst.update({RandomKLeur : 1})
     else:
-        x=lijst.get(kleuren[KleurVerschil]) +1
+        x = lijst.get(kleuren[KleurVerschil]) +1
         lijst.update({kleuren[KleurVerschil]:x})    
 print(lijst)
