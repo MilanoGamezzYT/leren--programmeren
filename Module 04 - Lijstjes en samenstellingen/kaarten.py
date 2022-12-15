@@ -13,6 +13,5 @@ random.shuffle(deck)
 for g in range(1,8):
     print(f'Kaart {g}: {deck[g]}')
     deck.pop(0)
-    print(f"deck ({len(deck)} kaarten): {deck}")
     
 print(f"deck ({len(deck)} kaarten): {deck}")
