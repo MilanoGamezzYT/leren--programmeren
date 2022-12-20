@@ -13,6 +13,6 @@ for i in fruitmand:
         colors += i['color']
         weight += str(i['weight'])
 
-letter_amount = len(names[0])
+aantal = len(names[0])
 
-print(f"De '{names[0]}' ({letter_amount} letters) heeft een {colors} kleur en heeft een gewicht van {weight} gram")
+print(f"De '{names[0]}' ({aantal} letters) heeft een {colors} kleur en heeft een gewicht van {weight} gram")
