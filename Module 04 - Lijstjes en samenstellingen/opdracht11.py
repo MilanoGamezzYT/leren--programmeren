@@ -15,7 +15,7 @@ while not isrond:
                 nietrond += 1
             isrond = True
     if not isrond:
-        print(f"De kleur {kleur} zit er niet in de fruitmand")
+        print(f"De kleur {kleur} zit niet in de fruitmand")
 
 if rond > nietrond:
     print(f'Er zijn {rond - nietrond} meer ronde vruchten dan niet ronde vruchten in de kleur {kleur}')
