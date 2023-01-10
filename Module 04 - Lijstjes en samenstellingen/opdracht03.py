@@ -1,3 +1,3 @@
 from fruitmand import fruitmand
-for x in fruitmand:
-    print(x['name'])
+for fruit in fruitmand:
+    print(fruit['name'])

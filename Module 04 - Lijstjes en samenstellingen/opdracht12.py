@@ -1,18 +1,18 @@
 from fruitmand import fruitmand
 
-names = []
-colors = ""
-weight = ""
+namen = []
+kleuren = ""
+gewicht = ""
 
 for i in fruitmand:
-    names.append(i['name'])
-names.sort(key=len, reverse=True)
+    namen.append(i['name'])
+namen.sort(key=len, reverse=True)
 
 for i in fruitmand:
-    if i['name'] == names[0]:
-        colors += i['color']
-        weight += str(i['weight'])
+    if i['name'] == namen[0]:
+        kleuren += i['color']
+        gewicht += str(i['weight'])
 
-aantal = len(names[0])
+aantal = len(namen[0])
 
-print(f"De '{names[0]}' ({aantal} letters) heeft een {colors} kleur en heeft een gewicht van {weight} gram")
+print(f"De '{namen[0]}' ({aantal} letters) heeft een {kleuren} kleur en heeft een gewicht van {gewicht} gram")

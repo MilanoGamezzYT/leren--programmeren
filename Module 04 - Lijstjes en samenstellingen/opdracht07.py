@@ -1,6 +1,6 @@
 from fruitmand import fruitmand
 
-for x in fruitmand:
-    if x['round']:
-        print(x['name'])
+for fruit in fruitmand:
+    if fruit['round']:
+        print(fruit['name'])
 

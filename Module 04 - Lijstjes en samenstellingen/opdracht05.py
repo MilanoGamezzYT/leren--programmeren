@@ -1,5 +1,5 @@
 from fruitmand import fruitmand
 
 fruitmand1 = reversed(fruitmand)
-for x in fruitmand1:
-    print(x['name'])
+for fruit in fruitmand1:
+    print(fruit['name'])

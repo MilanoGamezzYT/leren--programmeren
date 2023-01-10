@@ -1,6 +1,6 @@
 from fruitmand import fruitmand
 
-newlist = sorted(fruitmand, key=lambda d: d['weight'], reverse=True)
-for x in newlist:
-    print(x['name'])
-    print(x['weight'])
+lijst = sorted(fruitmand, key=lambda d: d['weight'], reverse=True)
+for fruit in lijst:
+    print(fruit['name'])
+    print(fruit['weight'])
