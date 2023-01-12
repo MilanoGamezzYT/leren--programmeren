@@ -1,13 +1,8 @@
 from fruitmand import fruitmand
-
+# voeg watermeloen toe aan lijst en print totale gewicht
 gewicht = 0
-fruitmand.append({'name': 'watermelon', 'weight': 2600, 'color': 'green'})
+fruitmand.append({'name': 'watermeloen', 'color': 'groen', 'weight': 0, 'round': True})
 
 for fruit in fruitmand:
-    if fruit['color'] == 'green':
-        print(f'{gewicht + totale_gewicht}')
-        totale_gewicht = fruit['weight']
-        gewicht += totale_gewicht
-else:
-    print('de watermeloen is niet rood')
-# print(gewicht)
+    gewicht += fruit['weight']
+print(gewicht)

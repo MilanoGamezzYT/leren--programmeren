@@ -10,8 +10,8 @@ namen.sort(key=len, reverse=True)
 
 for i in fruitmand:
     if i['name'] == namen[0]:
-        kleuren += i['color']
-        gewicht += str(i['weight'])
+        kleuren = i['color']
+        gewicht = str(i['weight'])
 
 aantal = len(namen[0])
 
