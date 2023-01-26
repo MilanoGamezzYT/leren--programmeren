@@ -7,7 +7,7 @@ stop = False
 stop2 = False
 
 while not stop:
-    userinput = input('geef een naam voor op het lootje  ')
+    userinput = input('Vul een naam in ')
     if userinput not in lijst1:
         lijst1.append(userinput)
         lijst2.append(userinput)
@@ -15,7 +15,7 @@ while not stop:
         print('deze naam is al opgegeven')
 
     if len(lijst1) >= 3:
-        nog_een_naam = input('wil je nog een naam toevoegen?  ').lower()
+        nog_een_naam = input('Wil je meer namen toevoegen?  ').lower()
         if nog_een_naam == 'nee':
            stop = True
 
