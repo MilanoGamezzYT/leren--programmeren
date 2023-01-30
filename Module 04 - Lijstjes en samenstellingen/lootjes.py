@@ -3,30 +3,30 @@
 from random import shuffle
 lijst1 = []
 lijst2 = []
-stop = False
-stop2 = False
+stop_namen = False
+stop_lootjes = False
 
-while not stop:
-    userinput = input('Vul een naam in ')
-    if userinput not in lijst1:
-        lijst1.append(userinput)
-        lijst2.append(userinput)
+while not stop_namen:
+    naam = input('Vul een naam in ')
+    if naam not in lijst1:
+        lijst1.append(naam)
+        lijst2.append(naam)
     else:
         print('deze naam is al opgegeven')
 
     if len(lijst1) >= 3:
         nog_een_naam = input('Wil je meer namen toevoegen?  ').lower()
         if nog_een_naam == 'nee':
-           stop = True
+           stop_namen = True
 
 shuffle(lijst1)
 
 
-while not stop2:
+while not stop_lootjes:
     shuffle(lijst1)
-    stop2 = True
+    stop_lootjes = True
     for x in range(0,len(lijst2)):
         if lijst1[x] == lijst2[x]:
-            stop2 = False
+            stop_lootjes = False
 for x in range(0,len(lijst2)):
     print(f'{lijst1[x]} heeft {lijst2[x]} getrokken')
