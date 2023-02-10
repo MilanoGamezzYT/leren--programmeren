@@ -12,4 +12,4 @@ def print_fibonacci_sequence(n):
     print(fibonacci_number(n), end=", ")
     print_fibonacci_sequence(n-1)
 
-print_fibonacci_sequence(10)
+print_fibonacci_sequence(9)

@@ -3,8 +3,8 @@
 def tafels(hoeveelheid: int):
     for getal in range(1,11):
         print(f'{getal} x {hoeveelheid} = {getal * hoeveelheid}')
-while not (answer := input('Voer een getal in: ')):
-    print('Voer een echt getal in')
-
-tafels(int(answer))
-        
+while True:
+    getal = input('Welke tafel wil je zien? ')
+    if getal == 'stop':
+        break
+    tafels(int(getal))

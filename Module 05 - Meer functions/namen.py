@@ -1,6 +1,6 @@
 def get_person_data():
-    name = input("Enter name: ")
-    age = input("Enter age: ")
+    name = input("Voer een naam in: ")
+    age = input(f'Hoe oud is {name}? ')
     return {'name': name, 'age': age}
 
 person_data_list = []
