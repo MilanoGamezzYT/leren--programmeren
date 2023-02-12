@@ -15,21 +15,15 @@ def calculator():
     while True:
         print("Wat wilt u doen? A) getallen optellen, B) getallen aftrekken, C) getallen vermenigvuldigen, D) getallen delen, E) getal ophogen, F) getal verlagen, G) getal verdubbelen, H) getal halveren of I) niets?")
         choice = input()
+        n1 = float(input("Eerste getal: "))
+        n2 = float(input("Tweede getal: "))
         if choice == 'A':
-            n1 = float(input("Eerste getal: "))
-            n2 = float(input("Tweede getal: "))
             result = addition(n1, n2)
         elif choice == 'B':
-            n1 = float(input("Eerste getal: "))
-            n2 = float(input("Tweede getal: "))
             result = subtraction(n1, n2)
         elif choice == 'C':
-            n1 = float(input("Eerste getal: "))
-            n2 = float(input("Tweede getal: "))
             result = multiplication(n1, n2)
         elif choice == 'D':
-            n1 = float(input("Eerste getal: "))
-            n2 = float(input("Tweede getal: "))
             result = division(n1, n2)
         elif choice == 'E':
             n1 = float(input("Getal: "))
