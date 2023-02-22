@@ -5,6 +5,7 @@ from data import COST_HORSE_SILVER_PER_DAY, COST_TENT_GOLD_PER_WEEK
 from data import JOURNEY_IN_DAYS
 from data import COST_FOOD_HORSE_COPPER_PER_DAY
 from data import COST_FOOD_HUMAN_COPPER_PER_DAY
+from data import adventurerGear
 
 ##################### M04.D02.O2 #####################
 
@@ -15,7 +16,7 @@ def silver2gold(amount:int) -> float:
     return amount / 5 
 
 def copper2gold(amount:int) -> float:
-    return copper2silver(amount) / 5
+    return silver2gold(copper2silver(amount))
 
 def platinum2gold(amount:int) -> float:
     return amount * 25
@@ -26,7 +27,7 @@ def getPersonCashInGold(personCash:dict) -> float:
 ##################### M04.D02.O4 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
-    return (people * COST_FOOD_HUMAN_COPPER_PER_DAY + horses * COST_FOOD_HORSE_COPPER_PER_DAY) / 50
+    return (people * COST_FOOD_HUMAN_COPPER_PER_DAY / 50 * JOURNEY_IN_DAYS) + (horses * COST_FOOD_HORSE_COPPER_PER_DAY / 50 * JOURNEY_IN_DAYS)
 
 ##################### M04.D02.O5 #####################
 
@@ -56,10 +57,26 @@ def getTotalRentalCost(horses: int, tents: int) -> float:
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+    return ', '.join([f"{item['amount']}{item['unit']} {item['name']}" for item in items])
 
-def getItemsValueInGold(items:list) -> float:
-    pass
+def getItemsValueInGold(items: list) -> float:
+    total_gold = 0
+    for item in items:
+        if item['price']['type'] == 'gold':
+            item_gold = item['amount'] * item['price']['amount']
+            total_gold += item_gold
+        elif item['price']['type'] == 'silver':
+            item_gold = item['amount'] * item['price']['amount'] / 5
+            total_gold += item_gold
+        elif item['price']['type'] == 'copper':
+            item_gold = item['amount'] * item['price']['amount'] / 50
+            total_gold += item_gold
+        elif item['price']['type'] == 'platinum':
+            item_gold = item['amount'] * item['price']['amount'] * 25
+            total_gold += item_gold
+    return total_gold
+
+
 
 ##################### M04.D02.O8 #####################
 
