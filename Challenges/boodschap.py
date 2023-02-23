@@ -5,7 +5,7 @@ def tekst_tussen_haken(tekst):
         if letter == '[':
             tussen_haken = ''
         elif letter == ']':
-            resultaat += tussen_haken
+            resultaat += tussen_haken + ' '
             tussen_haken = ''
         else:
             tussen_haken += letter
