@@ -5,7 +5,6 @@ from data import COST_HORSE_SILVER_PER_DAY, COST_TENT_GOLD_PER_WEEK
 from data import JOURNEY_IN_DAYS
 from data import COST_FOOD_HORSE_COPPER_PER_DAY
 from data import COST_FOOD_HUMAN_COPPER_PER_DAY
-from data import adventurerGear
 
 ##################### M04.D02.O2 #####################
 
@@ -63,17 +62,18 @@ def getItemsValueInGold(items: list) -> float:
     total_gold = 0
     for item in items:
         if item['price']['type'] == 'gold':
-            item_gold = item['amount'] * item['price']['amount']
-            total_gold += item_gold
+            gold = item['amount'] * item['price']['amount']
+            total_gold += gold
         elif item['price']['type'] == 'silver':
-            item_gold = item['amount'] * item['price']['amount'] / 5
-            total_gold += item_gold
+            silver = silver2gold(item['amount'] * item['price']['amount'])
+            total_gold += silver
         elif item['price']['type'] == 'copper':
-            item_gold = item['amount'] * item['price']['amount'] / 50
-            total_gold += item_gold
+            copper = copper2gold(item['amount'] * item['price']['amount'])
+            total_gold += copper
         elif item['price']['type'] == 'platinum':
-            item_gold = item['amount'] * item['price']['amount'] * 25
-            total_gold += item_gold
+            platinum = platinum2gold(item['amount'] * item['price']['amount'])
+            total_gold += platinum
+        silver = silver2gold(item['amount'] * item['price']['amount'])
     return total_gold
 
 
