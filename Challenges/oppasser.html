@@ -7,14 +7,14 @@
 
 	<h1>Bereken aantal poten</h1>
 
-	<form id="dieren-form">
-		<label for="aantal-giraffen">Aantal giraffen:</label>
+	<form id="dieren">
+		<label for="aantal-giraffen">Aantal giraffen: </label>
 		<input type="number" id="aantal-giraffen" name="aantal-giraffen" required><br>
 
-		<label for="aantal-struisvogels">Aantal struisvogels:</label>
+		<label for="aantal-struisvogels">Aantal struisvogels: </label>
 		<input type="number" id="aantal-struisvogels" name="aantal-struisvogels" required><br>
 
-		<label for="aantal-zebras">Aantal zebra's:</label>
+		<label for="aantal-zebras">Aantal zebra's: </label>
 		<input type="number" id="aantal-zebras" name="aantal-zebras" required><br>
 
 		<input type="button" value="Bereken aantal poten" onclick="bereken_poten()">
@@ -23,19 +23,20 @@
 	<p id="resultaat"></p>
 
 	<script>
-		function bereken_poten() {
-			const aantal_giraffen = parseInt(document.getElementById("aantal-giraffen").value);
-			const aantal_struisvogels = parseInt(document.getElementById("aantal-struisvogels").value);
-			const aantal_zebras = parseInt(document.getElementById("aantal-zebras").value);
-
-			const poten_giraffen = aantal_giraffen * 4;
-			const poten_struisvogels = aantal_struisvogels * 2;
-			const poten_zebras = aantal_zebras * 4;
-			const totaal_poten = poten_giraffen + poten_struisvogels + poten_zebras;
-
-			document.getElementById("resultaat").innerHTML = "Het totale aantal poten is: " + totaal_poten;
-		}
+	function bereken_poten() {
+	    const aantal_giraffen = parseInt(document.getElementById("aantal-giraffen").value);
+	    const aantal_struisvogels = parseInt(document.getElementById("aantal-struisvogels").value);
+	    const aantal_zebras = parseInt(document.getElementById("aantal-zebras").value);
+	  
+	    const poten_giraffen = aantal_giraffen * 4;
+	    const poten_struisvogels = aantal_struisvogels * 2;
+	    const poten_zebras = aantal_zebras * 4;
+	    const totaal_poten = poten_giraffen + poten_struisvogels + poten_zebras;
+	  
+	    document.getElementById("resultaat").innerHTML = "Het totale aantal poten is: " + totaal_poten;
+	}
 	</script>
 
 </body>
 </html>
+

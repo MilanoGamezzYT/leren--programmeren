@@ -5,6 +5,7 @@ from data import COST_HORSE_SILVER_PER_DAY, COST_TENT_GOLD_PER_WEEK
 from data import JOURNEY_IN_DAYS
 from data import COST_FOOD_HORSE_COPPER_PER_DAY
 from data import COST_FOOD_HUMAN_COPPER_PER_DAY
+from data import investors
 
 ##################### M04.D02.O2 #####################
 
@@ -62,18 +63,13 @@ def getItemsValueInGold(items: list) -> float:
     total_gold = 0
     for item in items:
         if item['price']['type'] == 'gold':
-            gold = item['amount'] * item['price']['amount']
-            total_gold += gold
+            total_gold += item['amount'] * item['price']['amount']
         elif item['price']['type'] == 'silver':
-            silver = silver2gold(item['amount'] * item['price']['amount'])
-            total_gold += silver
+            total_gold += silver2gold(item['amount'] * item['price']['amount'])
         elif item['price']['type'] == 'copper':
-            copper = copper2gold(item['amount'] * item['price']['amount'])
-            total_gold += copper
+            total_gold += copper2gold(item['amount'] * item['price']['amount'])
         elif item['price']['type'] == 'platinum':
-            platinum = platinum2gold(item['amount'] * item['price']['amount'])
-            total_gold += platinum
-        silver = silver2gold(item['amount'] * item['price']['amount'])
+            total_gold += platinum2gold(item['amount'] * item['price']['amount'])
     return total_gold
 
 
@@ -81,18 +77,34 @@ def getItemsValueInGold(items: list) -> float:
 ##################### M04.D02.O8 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    total_cash = 0
+    for person in people:
+        total_cash += getPersonCashInGold(person['cash'])
+    return total_cash
+
 
 ##################### M04.D02.O9 #####################
 
 def getInterestingInvestors(investors:list) -> list:
-    pass
+    return getFromListByKeyIs(investors, 'interesting', True)
+
 
 def getAdventuringInvestors(investors:list) -> list:
-    pass
+    return getFromListByKeyIs(investors, 'adventuring', True)
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    total_gold = 0
+    for investor in investors:
+        if investor['cash'] == 'gold':
+            total_gold += investor(['amount'] * investor['cash']['gold'])
+        elif investor['price']['type'] == 'silver':
+            total_gold += silver2gold(investor['amount'] * investor['cash']['silver'])
+        elif investor['price']['type'] == 'copper':
+            total_gold += copper2gold(investor['amount'] * investor['cash']['copper'])
+        elif investor['price']['type'] == 'platinum':
+            total_gold += platinum2gold(investor['amount'] * investor['cash']['platinum'])
+    return total_gold
+      
 
 ##################### M04.D02.O10 #####################
 
