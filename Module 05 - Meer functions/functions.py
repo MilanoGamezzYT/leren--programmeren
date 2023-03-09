@@ -86,26 +86,26 @@ def getCashInGoldFromPeople(people:list) -> float:
 ##################### M04.D02.O9 #####################
 
 def getInterestingInvestors(investors:list) -> list:
-    return getFromListByKeyIs(investors, 'interesting', True)
-
+    InterestingInvestors = []
+    for index in range(0,len(investors)):    
+        if investors[index]['profitReturn'] <= 10:
+            InterestingInvestors.append(investors[index])
+    return InterestingInvestors
 
 def getAdventuringInvestors(investors:list) -> list:
-    return getFromListByKeyIs(investors, 'adventuring', True)
+    adventuringInvestors= []
+    for index in range (len(getInterestingInvestors(investors))):
+        if getInterestingInvestors(investors)[index]['adventuring'] :
+            adventuringInvestors.append(getInterestingInvestors(investors)[index])
+    return adventuringInvestors
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    total_gold = 0
-    for investor in investors:
-        if investor['cash'] == 'gold':
-            total_gold += investor(['amount'] * investor['cash']['gold'])
-        elif investor['price']['type'] == 'silver':
-            total_gold += silver2gold(investor['amount'] * investor['cash']['silver'])
-        elif investor['price']['type'] == 'copper':
-            total_gold += copper2gold(investor['amount'] * investor['cash']['copper'])
-        elif investor['price']['type'] == 'platinum':
-            total_gold += platinum2gold(investor['amount'] * investor['cash']['platinum'])
-    return total_gold
+    people= getAdventuringInvestors(investors)
+    rentalCost = getTotalRentalCost(1,1)
+    foodCost = getJourneyFoodCostsInGold(1,1)
+    totaal = (getItemsValueInGold(gear)  + rentalCost + foodCost) * len(people)
+    return totaal
       
-
 ##################### M04.D02.O10 #####################
 
 def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
