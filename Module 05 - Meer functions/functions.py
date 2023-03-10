@@ -115,7 +115,7 @@ def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int
     herberg_cost = people_cost  + horses_cost
     try:
         maxNachten = leftoverGold // herberg_cost
-    except ZeroDivisionError: 
+    except: 
         maxNachten = 0
     return maxNachten
 

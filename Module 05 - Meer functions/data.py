@@ -11,7 +11,7 @@ COST_INN_HORSE_COPPER_PER_NIGHT = 4
 
 #data
 mainCharacter = {
-    'name' : 'Israa',
+    'name' : 'Milan',
     'ownsHorse' : True,
     'adventuring' : True,
     'cash' : {
