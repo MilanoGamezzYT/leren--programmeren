@@ -33,16 +33,24 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### M04.D02.O5 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    return [item for item in list if item[key] == value]
+    newlist = []
+    for teller in range (0,len(list)):
+        if list[teller][key] == value: 
+                newlist.append(list[teller])
+    return newlist
 
 def getAdventuringPeople(people:list) -> list:
-    return getFromListByKeyIs(people, 'adventuring', True)
+    return getFromListByKeyIs(people,'adventuring',True)
 
 def getShareWithFriends(friends:list) -> int:
-    return getFromListByKeyIs(friends, 'shareWith', True)
+    return getFromListByKeyIs(friends,'shareWith',True)
 
 def getAdventuringFriends(friends:list) -> list:
-    return getFromListByKeyIs(friends, 'adventuring', True)
+    newlist= []
+    for teller in range (0,len(friends)):
+        if friends[teller]['adventuring'] and friends[teller]['shareWith']: 
+            newlist.append(friends[teller])
+    return newlist 
 
 ##################### M04.D02.O6 #####################
 
@@ -115,7 +123,7 @@ def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int
     herberg_cost = people_cost  + horses_cost
     try:
         maxNachten = leftoverGold // herberg_cost
-    except: 
+    except ZeroDivisionError: 
         maxNachten = 0
     return maxNachten
 
@@ -144,7 +152,38 @@ def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:list) -> f
 ##################### M04.D02.O13 #####################
 
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+    people = [mainCharacter] + friends + investors
+    earnings = []
+
+    # haal de juiste inhoud op
+    adventuringFriends = getAdventuringFriends(friends)
+    adventuringInvestors = getAdventuringInvestors(investors)
+    investorsCuts = getInvestorsCuts(profitGold ,getInterestingInvestors(investors))
+    goldCut = round(getAdventurerCut(profitGold,investorsCuts,len([mainCharacter]+adventuringFriends+getAdventuringInvestors(investors))),2)
+
+    donateGold = 10
+
+    # verdeel de uitkomsten
+    for person in people:
+        #code aanvullen
+        startAdventure = getPersonCashInGold(person["cash"])
+        endAdventure = startAdventure
+        if person == mainCharacter:
+            endAdventure += round(goldCut + (donateGold*len(adventuringFriends)),2)
+        if person in adventuringFriends:
+            endAdventure += round(goldCut-donateGold,2)
+        
+        if person in getInterestingInvestors(investors):
+            if person in getAdventuringPeople(investors):
+                    endAdventure += round((profitGold/100)*person["profitReturn"]+goldCut,2)
+            else:
+                    endAdventure += round((profitGold/100)*person["profitReturn"],2)
+        earnings.append({
+            'name'   : person["name"],
+            'start'  : startAdventure,
+            'end'    : endAdventure
+        })
+    return earnings
 
 ##################### view functions #####################
 def print_colorvars(txt:str='{}', vars:list=[], color:str='yellow') -> None:
