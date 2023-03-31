@@ -18,6 +18,6 @@ for testName in testNames:
     print('')
     print_colorvars(vars=[testName])
     if exists(testName + '.py'):
-        __import__(testName)
+        __import__(testName + '.py')
     else:
         print_colorvars(vars=['TESTFILE NOT FOUND!'], color='red')
