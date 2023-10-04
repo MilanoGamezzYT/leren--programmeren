@@ -9,7 +9,7 @@ def fibonacci_number(n):
 def print_fibonacci_sequence(n):
     if n <= 0:
         return
-    print(fibonacci_number(n), end=", ")
+    print(fibonacci_number(n), end=" ")
     print_fibonacci_sequence(n-1)
 
 print_fibonacci_sequence(9)

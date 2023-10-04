@@ -7,7 +7,6 @@ stop = False
 while game != MAX_GAMES and stop == False:
     game += 1
     computer_getal = random.randint(1,1000)
-    print(computer_getal)
     rondes = 0  
     while rondes < MAX_RONDES:
         rondes += 1
